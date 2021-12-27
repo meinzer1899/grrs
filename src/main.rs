@@ -6,11 +6,13 @@ use anyhow::{Context, Result};
 use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
-/// derive debug so that we can print "debug representation" of a struct
+// derive debug so that we can print "debug representation" of a struct
 #[derive(StructOpt, Debug)]
 struct Cli {
+    /// pattern to search for
     #[structopt(required = true)]
     pattern: String,
+    /// file to parse
     #[structopt(parse(from_os_str), required = true)]
     path: std::path::PathBuf,
 }
