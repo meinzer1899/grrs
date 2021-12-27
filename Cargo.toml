@@ -18,7 +18,7 @@ path = "src/main.rs"
 
 [dependencies]
 structopt = "0.3.25"
-anyhow = "1.0.13"
+anyhow = "1.0.52"
 
 [dev-dependencies]
 assert_cmd = "2.0"
